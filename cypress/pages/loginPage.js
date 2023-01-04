@@ -10,7 +10,7 @@ class loginPage {
 
     FillName() {
         this.elements.inputName().type("Laila Borba");
-        
+
     }
 
     FillEmail() {
@@ -19,6 +19,13 @@ class loginPage {
 
     ClickOnSignUp() {
         this.elements.btnSignUp().click()
+    }
+
+    SignUp() {
+        this.FillName()
+        this.FillEmail()
+        this.ClickOnSignUp()
+        cy.title().should('be.equal', 'Automation Exercise - Signup')
     }
 }
 
