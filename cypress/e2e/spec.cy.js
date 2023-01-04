@@ -1,4 +1,5 @@
 import homePage from "../pages/homePage";
+import loginPage from "../pages/loginPage";
 
 describe('Suíte de Testes', () => {
   beforeEach(() => {
@@ -8,7 +9,7 @@ describe('Suíte de Testes', () => {
 
   it('TC01 Criar uma conta', function () {
     homePage.clickOnLogin()
-
+    loginPage.FillName()
 
   })
 })
