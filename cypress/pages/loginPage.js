@@ -10,7 +10,15 @@ class loginPage {
 
     FillName() {
         this.elements.inputName().type("Laila Borba");
-        this.elements.inputEmail().type("lailaborba@teste.com")
+        
+    }
+
+    FillEmail() {
+        this.elements.inputEmail().type("lailaborba@teste.com");
+    }
+
+    ClickOnSignUp() {
+        this.elements.btnSignUp().click()
     }
 }
 

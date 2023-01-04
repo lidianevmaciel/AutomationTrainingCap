@@ -10,6 +10,9 @@ describe('Suíte de Testes', () => {
   it('TC01 Criar uma conta', function () {
     homePage.clickOnLogin()
     loginPage.FillName()
+    loginPage.FillEmail()
+    loginPage.ClickOnSignUp()
+    cy.title().should('be.equal', 'Automation Exercise - Signup')
 
   })
 })
