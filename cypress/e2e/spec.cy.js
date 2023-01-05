@@ -12,8 +12,6 @@ describe('Suíte de Testes', () => {
   it('TC01 Criar uma conta', function () {
     homePage.clickOnLogin()
     loginPage.SignUp()
-    signUpPage.validateName()
-    signUpPage.validateEmail()
     signUpPage.FillPassword()
     signUpPage.FillFirstName()
     signUpPage.FillLastName()

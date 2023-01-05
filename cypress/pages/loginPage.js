@@ -1,3 +1,5 @@
+import { faker } from '@faker-js/faker';
+
 class loginPage {
 
     elements = {
@@ -9,11 +11,11 @@ class loginPage {
     }
 
     FillName() {
-        this.elements.inputName().type("Laila Borba");
+        this.elements.inputName().type(faker.name.fullName());
     }
 
     FillEmail() {
-        this.elements.inputEmail().type("lailaborbx@teste.com");
+        this.elements.inputEmail().type(faker.internet.email());
     }
 
     ClickOnSignUp() {

@@ -28,14 +28,6 @@ class signUpPage {
             .should('equal', 'Canada')
     }
 
-    validateName() {
-        this.elements.inputName().should('have.value', 'Laila Borba')
-    }
-
-    validateEmail() {
-        this.elements.inputEmail().should('have.value', 'lailaborbx@teste.com')
-    }
-
     FillPassword() {
         this.elements.inputPasswd().type("senha123")
     }
