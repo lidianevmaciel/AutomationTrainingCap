@@ -8,6 +8,10 @@ class accountCreatedPage {
     ValidateCreateAccount() {
         this.elements.createAccount().should('be.visible')
     }
+
+    ClickOnContinue() {
+        this.elements.btnContinue().click()
+    }
 }
 
 module.exports = new accountCreatedPage();

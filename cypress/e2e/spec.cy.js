@@ -23,5 +23,6 @@ describe('Suíte de Testes', () => {
     signUpPage.FillMobileNumber()
     signUpPage.ClickOnCreateAccount()
     AccountCreatedPage.ValidateCreateAccount()
+    AccountCreatedPage.ClickOnContinue()
   })
 })
