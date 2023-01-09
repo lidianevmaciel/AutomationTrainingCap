@@ -3,6 +3,8 @@ import loginPage from "../pages/loginPage";
 import signUpPage from "../pages/signUpPage";
 import AccountCreatedPage from "../pages/accountCreatedPage";
 import productDetailsPage from "../pages/productDetailsPage";
+import productPage from "../pages/productPage";
+import cartPage from "../pages/cartPage";
 
 describe('Suíte de Testes', () => {
   beforeEach(() => {
@@ -21,7 +23,13 @@ describe('Suíte de Testes', () => {
   it.only('TC02 Realizar uma compra', function (){
     homePage.clickOnLogin()
     loginPage.Login()
+    homePage.clickOnProducts()
+    productPage.inputSearch()
+    productPage.clickOnSearch()
     homePage.clickOnViewProduct()
     productDetailsPage.clickOnAddTocart()
+    productDetailsPage.clickOnContinueShop()
+    productDetailsPage.clickOnCart()
+    cartPage.clickOnProceedToCheckout()
   })
 })
