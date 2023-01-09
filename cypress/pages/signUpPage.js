@@ -63,6 +63,19 @@ class signUpPage {
     ClickOnCreateAccount() {
         this.elements.btnCreateAccount().click()
     }
+
+    AccountInformation() {
+        this.selectCountryOption()
+        this.FillPassword()
+        this.FillFirstName()
+        this.FillLastName()
+        this.FillAddress()
+        this.FillState()
+        this.FillCity()
+        this.FillZipCode()
+        this.FillMobileNumber()
+        this.ClickOnCreateAccount()
+    }
 }
 
 module.exports = new signUpPage();

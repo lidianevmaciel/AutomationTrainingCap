@@ -1,7 +1,8 @@
 import homePage from "../pages/homePage";
 import loginPage from "../pages/loginPage";
 import signUpPage from "../pages/signUpPage";
-import AccountCreatedPage from "../pages/AccountCreatedPage";
+import AccountCreatedPage from "../pages/accountCreatedPage";
+import productDetailsPage from "../pages/productDetailsPage";
 
 describe('Suíte de Testes', () => {
   beforeEach(() => {
@@ -12,17 +13,15 @@ describe('Suíte de Testes', () => {
   it('TC01 Criar uma conta', function () {
     homePage.clickOnLogin()
     loginPage.SignUp()
-    signUpPage.FillPassword()
-    signUpPage.FillFirstName()
-    signUpPage.FillLastName()
-    signUpPage.FillAddress()
-    signUpPage.selectCountryOption()
-    signUpPage.FillState()
-    signUpPage.FillCity()
-    signUpPage.FillZipCode()
-    signUpPage.FillMobileNumber()
-    signUpPage.ClickOnCreateAccount()
+    signUpPage.AccountInformation()
     AccountCreatedPage.ValidateCreateAccount()
     AccountCreatedPage.ClickOnContinue()
+  })
+
+  it.only('TC02 Realizar uma compra', function (){
+    homePage.clickOnLogin()
+    loginPage.Login()
+    homePage.clickOnViewProduct()
+    productDetailsPage.clickOnAddTocart()
   })
 })
