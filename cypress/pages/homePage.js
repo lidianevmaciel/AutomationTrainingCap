@@ -16,7 +16,7 @@ class homePage {
     }
 
     clickOnProducts() {
-        this.elements.productsBtn().click
+        this.elements.productsBtn().click()
     }
 }
 

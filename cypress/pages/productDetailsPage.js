@@ -3,7 +3,7 @@ class productDetailsPage {
         addToCartBtn: () => cy.xpath("//button[@class='btn btn-default cart']"),
         continueShopBtn: () => cy.get('.modal-footer > .btn'),
         addedText: () => cy.xpath('//*[text()="Added!"]'),
-        cartBtn: () => cy.xpath("//*[@href='/view_cart']")
+        cartBtn: () => cy.xpath("//*[text()=' Cart']")
     }
 
     clickOnAddTocart() {

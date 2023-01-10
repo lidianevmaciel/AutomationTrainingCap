@@ -5,6 +5,9 @@ import AccountCreatedPage from "../pages/accountCreatedPage";
 import productDetailsPage from "../pages/productDetailsPage";
 import productPage from "../pages/productPage";
 import cartPage from "../pages/cartPage";
+import checkoutPage from "../pages/checkoutPage";
+import paymentPage, { CardNumberInformation } from "../pages/paymentPage";
+import paymentDonePage from "../pages/paymentDonePage";
 
 describe('Suíte de Testes', () => {
   beforeEach(() => {
@@ -31,5 +34,8 @@ describe('Suíte de Testes', () => {
     productDetailsPage.clickOnContinueShop()
     productDetailsPage.clickOnCart()
     cartPage.clickOnProceedToCheckout()
+    checkoutPage.clickOnPlaceOrder()
+    paymentPage.CardNumberInformation()
+    paymentDonePage.clickOnContinue()
   })
 })
