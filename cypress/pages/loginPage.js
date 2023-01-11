@@ -33,7 +33,7 @@ class loginPage {
     }
 
     Login() {
-        this.elements.inputLogin().type("camilapitanga@teste.com")
+        this.elements.inputLogin().type("mariasouza@teste.com")
         this.elements.inputSenha().type("senha123")
         this.elements.loginBtn().click()
     }

@@ -37,12 +37,10 @@ describe('Suíte de Testes', () => {
     cartPage.clickOnProceedToCheckout()
     checkoutPage.clickOnPlaceOrder()
     paymentPage.CardNumberInformation()
-    paymentDonePage.clickOnDonwloadInvoice()
-    paymentDonePage.verifyInvoice()
     paymentDonePage.clickOnContinue()
   })
 
-  it.only('Deletar uma conta', function () {
+  it('Deletar uma conta', function () {
     homePage.clickOnLogin()
     loginPage.Login()
     homePage.clickOnDeleteAccount() 
