@@ -1,4 +1,4 @@
-import homePage from "../pages/homePage";
+import homePage, { clickOnDeleteAccount } from "../pages/homePage";
 import loginPage from "../pages/loginPage";
 import signUpPage from "../pages/signUpPage";
 import AccountCreatedPage from "../pages/accountCreatedPage";
@@ -8,6 +8,7 @@ import cartPage from "../pages/cartPage";
 import checkoutPage from "../pages/checkoutPage";
 import paymentPage, { CardNumberInformation } from "../pages/paymentPage";
 import paymentDonePage from "../pages/paymentDonePage";
+import deleteAccountPage from "../pages/deleteAccountPage";
 
 describe('Suíte de Testes', () => {
   beforeEach(() => {
@@ -23,7 +24,7 @@ describe('Suíte de Testes', () => {
     AccountCreatedPage.ClickOnContinue()
   })
 
-  it.only('TC02 Realizar uma compra', function (){
+  it('TC02 Realizar uma compra', function (){
     homePage.clickOnLogin()
     loginPage.Login()
     homePage.clickOnProducts()
@@ -36,6 +37,16 @@ describe('Suíte de Testes', () => {
     cartPage.clickOnProceedToCheckout()
     checkoutPage.clickOnPlaceOrder()
     paymentPage.CardNumberInformation()
+    paymentDonePage.clickOnDonwloadInvoice()
+    paymentDonePage.verifyInvoice()
     paymentDonePage.clickOnContinue()
+  })
+
+  it.only('Deletar uma conta', function () {
+    homePage.clickOnLogin()
+    loginPage.Login()
+    homePage.clickOnDeleteAccount() 
+    deleteAccountPage.accountDeletede()
+
   })
 })

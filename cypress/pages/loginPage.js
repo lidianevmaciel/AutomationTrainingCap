@@ -12,13 +12,13 @@ class loginPage {
     }
 
     FillName() {
-        this.elements.inputName().type("Laila Borba")
-        //this.elements.inputName().type(faker.name.fullName());
+        //this.elements.inputName().type("Laila Borba")
+        this.elements.inputName().type(faker.name.fullName());
     }
 
     FillEmail() {
-        this.elements.inputEmail().type("lailacastro@teste.com")
-        //this.elements.inputEmail().type(faker.internet.email());
+        //this.elements.inputEmail().type("lailacastro@teste.com")
+        this.elements.inputEmail().type(faker.internet.email());
     }
 
     ClickOnSignUp() {
@@ -33,7 +33,7 @@ class loginPage {
     }
 
     Login() {
-        this.elements.inputLogin().type("lailacastro@teste.com")
+        this.elements.inputLogin().type("camilapitanga@teste.com")
         this.elements.inputSenha().type("senha123")
         this.elements.loginBtn().click()
     }

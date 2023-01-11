@@ -16,7 +16,7 @@ class paymentDonePage {
     }
 
     verifyInvoice() {
-        cy.readFile('Downloads/invoice')
+        cy.readFile('cypress\downloads\invoice.txt')
       .should('contain', "Hi Laila Borba, Your total purchase amount is 500. Thank you")
     }
 }
